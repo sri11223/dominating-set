@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = [
+    "/root/dominating_set_submission/solver.py",
+]
+
+[task]
+name = "turing/dominating-set"
+description = "Find a minimum dominating set of an unlabelled graph, including large instances whose certified minimum must be constructed rather than guessed."
+version = "1.0.0"
+keywords = ["dominating-set", "graph-theory", "combinatorial-optimization", "perfect-codes", "hypercube-domination", "packing-certificates"]
+
+[metadata]
+domain = "mathematical-sciences"
+category = "operations-research"
+subcategory = "extremal graph theory and dominating sets"
+reward_type = "binary"
+source = "Written by PhD annotators"
+public_overlap = "No public benchmark overlap: instances are deterministic synthetic constructions over textbook graph families, generated for this task."
+
+[verifier]
+timeout_sec = 21600
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+network_mode = "no-network"
+cpus = 4
+memory_mb = 8192
+
+[agent]
+timeout_sec = 18000
+network_mode = "public"
+
+[environment]
+cpus = 4
+memory_mb = 8192
+storage_mb = 10240
+network_mode = "public"
